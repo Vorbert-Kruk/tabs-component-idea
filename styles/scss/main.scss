@@ -11,4 +11,54 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: $accent-saturated;
+  display: flex;
+  min-height: 100vh;
+}
+
+.card {
+  margin: auto;
+  color: $secondary-saturated;
+  max-width: 750px;
+
+  &__tab {
+    $tab-selector: &;
+
+    &__wrapper {
+      display: flex;
+    }
+
+    & {
+      $tab-border-radius: 1.15rem;
+
+      font-size: 1.5rem;
+      display: inline-block;
+      background-color: $accent;
+      padding: 0.5rem 1.5rem;
+      border-radius: $tab-border-radius $tab-border-radius 0 0;
+      color: $light;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:not(#{&}--active):hover {
+        background-color: mix($accent, $light, 75);
+      }
+    }
+
+    &--active {
+      background-color: $light;
+      color: $accent;
+    }
+  }
+
+  &__body {
+    font-size: 1.25rem;
+    background-color: $light;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    border-top-left-radius: 0;
+    line-height: 140%;
+  }
 }
