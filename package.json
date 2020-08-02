@@ -1,0 +1,22 @@
+{
+  "name": "html-coding-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch-styles": "node-sass --watch ./styles/scss/ --output ./styles/css --output-style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vorbert-Kruk/html-coding-template.git"
+  },
+  "author": "Norbert Kruk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Vorbert-Kruk/html-coding-template/issues"
+  },
+  "homepage": "https://github.com/Vorbert-Kruk/html-coding-template#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
