@@ -48,10 +48,17 @@ const changeTab = tab => {
   }
 };
 
+const updateSectionsContainerHeight = () => {
+  const currentlyActiveSection = getCurrentlyActiveSection();
+  currentlyActiveSection && changeSectionsContainerHeight(currentlyActiveSection);
+};
+
 (() => {
   changeTab(getCurrentlyActiveTab());
 
   tabs.forEach(tab => {
     tab.addEventListener('click', () => changeTab(tab));
   });
+
+  window.addEventListener('resize', () => updateSectionsContainerHeight());
 })();
