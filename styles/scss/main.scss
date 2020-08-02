@@ -53,17 +53,29 @@ body {
   }
 
   &__body {
+    position: relative;
     font-size: 1.25rem;
     background-color: $light;
     padding: 1rem 1.5rem;
     border-radius: 0.5rem;
     border-top-left-radius: 0;
     line-height: 140%;
+    overflow: hidden;
+    transition: all 350ms ease;
   }
 
   &__section {
+    & {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: inherit;
+      transition: all 150ms 350ms ease-in-out;
+    }
+
     &:not(#{&}--active) {
-      display: none;
+      opacity: 0;
+      transition: all 150ms ease-out;
     }
   }
 }
