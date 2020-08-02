@@ -17,9 +17,10 @@ const tabs = document.querySelectorAll(tabSelector);
 const tabsSections = document.querySelector(tabSectionSelector);
 const tabSectionsContainer = document.querySelector(tabSectionsContainerSelector);
 
-const setTabActive = tab => tab && tab.classList.add(activeTabClassName);
 const setTabInactive = tab => tab && tab.classList.remove(activeTabClassName);
+const setTabActive = tab => tab && tab.classList.add(activeTabClassName);
 
+const setSectionInactive = section => section && section.classList.remove(activeSectionClassName);
 const setSectionActive = sectionId => {
   const currentSection = document.querySelector(`${tabSectionSelector}#${sectionId}`);
 
@@ -28,7 +29,6 @@ const setSectionActive = sectionId => {
     currentSection.classList.add(activeSectionClassName);
   }
 };
-const setSectionInactive = section => section && section.classList.remove(activeSectionClassName);
 
 const getCurrentlyActiveTab = () => document.querySelector(`.${activeTabClassName}`);
 const getCurrentlyActiveSection = () => document.querySelector(`.${activeSectionClassName}`);
