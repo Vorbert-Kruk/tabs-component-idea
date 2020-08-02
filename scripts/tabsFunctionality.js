@@ -50,9 +50,7 @@ const changeTab = tab => {
 
 (() => {
   tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      changeTab(tab);
-    });
+    tab.addEventListener('click', () => changeTab(tab));
   });
 
   changeTab(getCurrentlyActiveTab());
