@@ -26,15 +26,19 @@ const setSectionInactive = section => section && section.classList.remove(active
 const getCurrentlyActiveTab = () => document.querySelector(`.${activeTabClassName}`);
 const getCurrentlActiveSection = () => document.querySelector(`.${activeSectionClassName}`);
 
+const changeTab = tab => {
+  const tabSectionId = tab.getAttribute(tabDataAttributeName);
+
+  if (tabSectionId) {
+    setTabInactive(getCurrentlyActiveTab());
+    setSectionInactive(getCurrentlActiveSection());
+    setTabActive(tab);
+    setSectionActive(tabSectionId);
+  }
+};
+
 tabs.forEach(tab => {
   tab.addEventListener('click', () => {
-    const tabSectionId = tab.getAttribute(tabDataAttributeName);
-
-    if (tabSectionId) {
-      setTabInactive(getCurrentlyActiveTab());
-      setSectionInactive(getCurrentlActiveSection());
-      setTabActive(tab);
-      setSectionActive(tabSectionId);
-    }
+    changeTab(tab);
   });
 });

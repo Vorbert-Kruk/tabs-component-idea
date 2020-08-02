@@ -12,18 +12,14 @@
 body {
   font-family: 'Roboto', sans-serif;
   background-color: $accent-saturated;
-  display: flex;
-  min-height: 100vh;
 }
 
 .card {
-  margin: auto;
+  margin: 250px auto 0;
   color: $secondary-saturated;
   max-width: 750px;
 
   &__tab {
-    $tab-selector: &;
-
     &__wrapper {
       display: flex;
     }
@@ -38,6 +34,8 @@ body {
       border-radius: $tab-border-radius $tab-border-radius 0 0;
       color: $light;
       text-decoration: none;
+      user-select: none;
+      transition: all 150ms ease;
 
       &:hover {
         cursor: pointer;
