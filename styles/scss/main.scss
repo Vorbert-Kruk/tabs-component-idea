@@ -61,11 +61,11 @@ body {
     border-radius: 0.5rem;
     border-top-left-radius: 0;
     line-height: 140%;
+  }
 
-    &__tab {
-      &:not(#{&}--active) {
-        display: none;
-      }
+  &__section {
+    &:not(#{&}--active) {
+      display: none;
     }
   }
 }
