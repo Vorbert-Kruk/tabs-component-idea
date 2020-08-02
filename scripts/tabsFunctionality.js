@@ -1,9 +1,10 @@
 const cardClassName = 'card';
+const tabDataAttributeName = 'data-tab-id';
 
 const tabClassName = `${cardClassName}__tab`;
 const tabSectionClassName = `${cardClassName}__section`;
 
-const tabSelector = `.${tabClassName}[data-tab-id]`;
+const tabSelector = `.${tabClassName}[${tabDataAttributeName}]`;
 const tabSectionSelector = `.${tabSectionClassName}`;
 
 const activeTabClassName = `${tabClassName}--active`;
@@ -27,7 +28,7 @@ const getCurrentlActiveSection = () => document.querySelector(`.${activeSectionC
 
 tabs.forEach(tab => {
   tab.addEventListener('click', () => {
-    const tabSectionId = tab.getAttribute('data-tab-id');
+    const tabSectionId = tab.getAttribute(tabDataAttributeName);
 
     if (tabSectionId) {
       setTabInactive(getCurrentlyActiveTab());
