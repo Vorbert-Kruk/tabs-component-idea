@@ -33,7 +33,7 @@ const setSectionInactive = section => section && section.classList.remove(active
 const getCurrentlyActiveTab = () => document.querySelector(`.${activeTabClassName}`);
 const getCurrentlyActiveSection = () => document.querySelector(`.${activeSectionClassName}`);
 
-const getSectionHeight = section => section.getBoundingClientRect().height;
+const getSectionHeight = section => section && section.getBoundingClientRect().height;
 const changeSectionsContainerHeight = section =>
   (tabSectionsContainer.style.height = `${getSectionHeight(section)}px`);
 
