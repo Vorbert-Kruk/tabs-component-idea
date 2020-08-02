@@ -37,6 +37,7 @@ body {
       padding: 0.5rem 1.5rem;
       border-radius: $tab-border-radius $tab-border-radius 0 0;
       color: $light;
+      text-decoration: none;
 
       &:hover {
         cursor: pointer;
@@ -60,5 +61,11 @@ body {
     border-radius: 0.5rem;
     border-top-left-radius: 0;
     line-height: 140%;
+
+    &__tab {
+      &:not(#{&}--active) {
+        display: none;
+      }
+    }
   }
 }
