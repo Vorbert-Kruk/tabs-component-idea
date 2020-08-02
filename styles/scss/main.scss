@@ -17,6 +17,7 @@ body {
 .card {
   margin: 250px auto 0;
   color: $secondary-saturated;
+  width: 92.5%;
   max-width: 750px;
 
   &__tab {
@@ -27,15 +28,21 @@ body {
     & {
       $tab-border-radius: 1.15rem;
 
-      font-size: 1.5rem;
       display: inline-block;
+      padding: 0.35em 1em;
       background-color: $accent;
-      padding: 0.5rem 1.5rem;
       border-radius: $tab-border-radius $tab-border-radius 0 0;
+      font-size: 1.5rem;
       color: $light;
+      text-align: center;
       text-decoration: none;
       user-select: none;
       transition: all 150ms ease;
+
+      @media screen and (max-width: 600px) {
+        font-size: 1.25rem;
+        padding: 0.35em 0.75em;
+      }
 
       &:hover {
         cursor: pointer;
@@ -56,12 +63,16 @@ body {
     position: relative;
     font-size: 1.25rem;
     background-color: $light;
-    padding: 1rem 1.5rem;
+    padding: 0.8em 1.2em;
     border-radius: 0.5rem;
     border-top-left-radius: 0;
     line-height: 140%;
     overflow: hidden;
     transition: all 350ms ease;
+
+    @media screen and (max-width: 600px) {
+      font-size: 1.15rem;
+    }
   }
 
   &__section {
